@@ -21,6 +21,11 @@ addItemBtn.addEventListener('click', function() {
     itemList.appendChild(newItem);
 });
 
+const removeItemBtn = document.getElementById('remove-item-btn');
+removeItemBtn.addEventListener('click', function() {
+    itemList.removeChild(itemList.lastElementChild);
+})
+
 const highlightTitleBtn = document.getElementById('highlight-title-btn');
 highlightTitleBtn.addEventListener('click', function() {
     mainTitle.classList.toggle('highlight');
