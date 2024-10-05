@@ -39,10 +39,12 @@ function updateFooter() {
 
 updateFooter();
 
-const addCustomItem = document.getElementById('add-custom-item-btn');
-addCustomItem.addEventListener('click', function() {
-    customInput = 'test without form input';
+const addCustomItem = document.getElementById('form-input');
+addCustomItem.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const customInput = document.getElementById('custom-item-content').value;
     const customItem = document.createElement('li');
     customItem.textContent = customInput;
     itemList.appendChild(customItem);
+    addCustomItem.reset();
 })
