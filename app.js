@@ -38,3 +38,11 @@ function updateFooter() {
 }
 
 updateFooter();
+
+const addCustomItem = document.getElementById('add-custom-item-btn');
+addCustomItem.addEventListener('click', function() {
+    customInput = 'test without form input';
+    const customItem = document.createElement('li');
+    customItem.textContent = customInput;
+    itemList.appendChild(customItem);
+})
